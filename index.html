@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1f7a5a" />
+  <title>폐선암 추적관찰 저염 레시피 50</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="heroText">
+      <p class="eyebrow">Lung Adenocarcinoma Follow-up Meal Guide</p>
+      <h1>폐선암 추적관찰<br>저염 레시피 50</h1>
+      <p>가공육·술·탄 음식·짠 국물은 줄이고, 채소·콩류·생선·닭·계란을 균형 있게 먹는 모바일 식단 앱입니다.</p>
+      <div class="heroActions">
+        <button id="randomBtn" class="primary">오늘 추천 3개</button>
+        <button id="planBtn" class="secondary">7일 식단 자동생성</button>
+      </div>
+    </div>
+    <div class="scoreCard">
+      <span>식단 원칙</span>
+      <strong>저염 · 비가공 · 삶기/찜</strong>
+      <small>재발 예방을 보장하는 앱이 아니라, 암 생존자 식사 권고에 맞춘 실천 도구입니다.</small>
+    </div>
+  </header>
+
+  <main>
+    <section class="stats" aria-label="요약">
+      <div><strong id="totalCount">50</strong><span>전체 레시피</span></div>
+      <div><strong id="lowSaltCount">50</strong><span>저염 기준</span></div>
+      <div><strong id="plantCount">0</strong><span>채소·콩 중심</span></div>
+      <div><strong id="soupCount">0</strong><span>국물주의 표시</span></div>
+    </section>
+
+    <section class="notice">
+      <h2>앱 사용 기준</h2>
+      <div class="rules">
+        <div><b>피하기</b><span>햄·소시지·베이컨·스팸·탄 고기·술·달달한 음료</span></div>
+        <div><b>줄이기</b><span>국물, 젓갈, 장아찌, 시판소스, 스파게티 면</span></div>
+        <div><b>늘리기</b><span>브로콜리·양배추·콩류·두부·생선·닭가슴살·베리류</span></div>
+      </div>
+    </section>
+
+    <section id="today" class="panel">
+      <div class="sectionTitle">
+        <h2>오늘 추천</h2>
+        <p>필터를 적용한 상태에서 추천을 누르면 그 기준 안에서 골라줍니다.</p>
+      </div>
+      <div id="todayPick" class="todayPick"></div>
+    </section>
+
+    <section class="panel">
+      <div class="sectionTitle">
+        <h2>레시피 찾기</h2>
+        <button id="clearFilters" class="textBtn">필터 초기화</button>
+      </div>
+      <input id="search" class="search" type="search" placeholder="예: 청국장, 브로콜리, 동태탕, 계란, 국물주의" />
+      <h3 class="filterLabel">분류</h3>
+      <div id="categoryFilters" class="chips"></div>
+      <h3 class="filterLabel">태그</h3>
+      <div id="tagFilters" class="chips tagsFilter"></div>
+    </section>
+
+    <section class="panel">
+      <div class="sectionTitle">
+        <h2>레시피 50개</h2>
+        <p id="resultCount">50개 레시피</p>
+      </div>
+      <div id="recipeGrid" class="grid"></div>
+    </section>
+
+    <section id="plan" class="panel">
+      <div class="sectionTitle">
+        <h2>7일 식단표</h2>
+        <div>
+          <button id="clearPlanBtn" class="textBtn">식단 비우기</button>
+          <button id="printBtn" class="textBtn">인쇄/PDF</button>
+        </div>
+      </div>
+      <div id="planTable"></div>
+      <div id="shoppingList"></div>
+    </section>
+
+    <section class="panel reference">
+      <h2>중요 안내</h2>
+      <p>이 앱은 폐선암 치료를 대체하지 않습니다. 수술 후 추적관찰, 표적치료, 면역치료, 항응고제, 신장질환, 통풍, 당뇨, 체중감소가 있으면 주치의·영양사 기준을 우선하세요.</p>
+      <p>고용량 항산화제·민간요법 보충제는 임의로 추가하지 말고, 복용 중인 약과 상호작용 가능성을 확인하세요.</p>
+    </section>
+  </main>
+
+  <div id="modalBackdrop" class="backdrop"></div>
+  <aside id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button id="closeModal" class="close">×</button>
+    <h2 id="modalTitle"></h2>
+    <div id="modalBody"></div>
+  </aside>
+
+  <footer>
+    <p>© <span id="year"></span> 저염 레시피 앱 · 홈 화면에 추가해서 사용하세요.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

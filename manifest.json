@@ -1,0 +1,21 @@
+{
+  "name": "폐선암 저염 레시피 50",
+  "short_name": "저염레시피50",
+  "description": "폐선암 추적관찰 중 실천하기 쉬운 저염·비가공 레시피 50개",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f7f2",
+  "theme_color": "#1f7a5a",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
